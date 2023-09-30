@@ -16,36 +16,64 @@ body {
 }
 
 .clock-container {
-    width: 400px;
+    width: 600px;
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
     text-align: center;
     padding: 15px;
     background: linear-gradient(90deg, rgba(255,141,41,1) 0%, rgba(255,229,59,1) 100%);
     border-radius: 15px;
-    gap: 26px;
+    gap: 30px;
 }
 
 .numbers {
     font-size: 24px;
     color: white;
     font-weight: bold;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+.label {
+    width: 110px;
+    background: #050505E5;
+    border-radius: 8px;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hours {
-    width: 100px;
+    width: 110px;
     background: #050505E5;
     border-radius: 8px;
 }
 
 .minutes {
-    width: 100px;
+    width: 110px;
     background: #050505E5;
     border-radius: 8px;
 }
 
 .seconds {
-    width: 100px;
+    width: 110px;
     background: #050505E5;
     border-radius: 8px;
+}
+
+.numbers:hover {
+    scale: 1.1;
+}
+
+@media (max-width: 768px){
+    .clock-container {
+        width: 80%;
+    }
+    .numbers {
+        width: 80%;
+        font-size: 10px;
+    }
 }
